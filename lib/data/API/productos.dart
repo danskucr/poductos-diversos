@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:productos_diversos/data/models/productos/productos_response.dart';
+import 'package:productos_diversos/data/models/productos/productos_model.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 class ProductosData {

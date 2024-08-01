@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:productos_diversos/constants/colors/palette.dart';
 import 'package:productos_diversos/presentation/anuncios/pages/anuncios_page.dart';
-import 'package:productos_diversos/presentation/anuncios/pages/detalle_anuncio.dart';
 import 'package:productos_diversos/presentation/carrito_compras/pages/carrito_compras_pages.dart';
 import 'package:productos_diversos/presentation/favoritos/pages/favoritos_page.dart';
 import 'package:productos_diversos/presentation/home/pages/home_page.dart';
@@ -23,7 +22,14 @@ class _InitialPageState extends State<InitialPage> {
     CarritoComprasPage(),
     AnunciosPage(),
     FavoritosPage(),
-    DetalleAnuncioPage()
+    PerfilPage()
+  ];
+  static const List<String> _textOptions = <String>[
+    'Home',
+    'Carrito',
+    'Buscador Anuncio',
+    'Favoritos',
+    'Perfil'
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -33,7 +39,10 @@ class _InitialPageState extends State<InitialPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
 
+        title: Text(_textOptions[position])
+      ),
       backgroundColor: colorsPalette.whitePD,
       body: Center(
         child: _widgetOptions.elementAt(position),

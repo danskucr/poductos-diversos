@@ -1,7 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'utils/initial_page.dart';
+import 'data/API/firebase_messaging.dart';
+import 'presentation/initial_page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding();
+  await Firebase.initializeApp();
+  await  FirebaseApi().initNotification();
   runApp(const MyApp());
 }
 

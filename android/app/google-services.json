@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "142628137997",
+    "project_id": "productos-diversos",
+    "storage_bucket": "productos-diversos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142628137997:android:9e70a3bd435b7184a1f944",
+        "android_client_info": {
+          "package_name": "com.example.productos_diversos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOQzGziCpl05djCCE60xERj7thAvVw-O8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
