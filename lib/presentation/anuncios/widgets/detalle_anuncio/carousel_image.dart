@@ -49,10 +49,9 @@ AnimatedContainer slider(images,pagePosition,active){
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 100,),
         SizedBox(
           width: MediaQuery.of(context).size.width,
-          height: 600,
+          height: 300,
           child: PageView.builder(
               itemCount: images.length,
               pageSnapping: true,

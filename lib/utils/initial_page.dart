@@ -6,15 +6,16 @@ import 'package:productos_diversos/presentation/carrito_compras/pages/carrito_co
 import 'package:productos_diversos/presentation/favoritos/pages/favoritos_page.dart';
 import 'package:productos_diversos/presentation/home/pages/home_page.dart';
 import 'package:productos_diversos/presentation/perfil/pages/perfil_page.dart';
+import 'package:productos_diversos/utils/bottom_navigation.dart';
 
-class BottomNavigationPD extends StatefulWidget {
-  const BottomNavigationPD({super.key});
+class InitialPage extends StatefulWidget {
+  const InitialPage({super.key});
 
   @override
-  State<BottomNavigationPD> createState() => _BottomNavigationPDState();
+  State<InitialPage> createState() => _InitialPageState();
 }
 
-class _BottomNavigationPDState extends State<BottomNavigationPD> {
+class _InitialPageState extends State<InitialPage> {
   int position = 0;
   ColorsPalette colorsPalette = ColorsPalette();
   static const List<Widget> _widgetOptions = <Widget>[
@@ -37,19 +38,7 @@ class _BottomNavigationPDState extends State<BottomNavigationPD> {
       body: Center(
         child: _widgetOptions.elementAt(position),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: colorsPalette.blueDarkPD,
-        // fixedColor: colorsPalette.whitePD,
-        useLegacyColorScheme: false,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.shop), label: 'Carrito'),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Buscador'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favoritos'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil')
-    ],
-    onTap: _onItemTapped,
-    currentIndex: position,), 
+      bottomNavigationBar:  bottomNavigationBar(_onItemTapped, position)
     );
   }
 }

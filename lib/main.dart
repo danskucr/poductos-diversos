@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'utils/bottom_navigation_bar.dart';
+import 'utils/initial_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Productos Diversos',
-
-      home: const BottomNavigationPD(),
+      home: const InitialPage(),
     );
   }
 }
