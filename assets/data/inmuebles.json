@@ -1,0 +1,34 @@
+{
+    "data": [
+      {
+        "id_producto": 7,
+        "titulo": "Casa 123",
+        "tipo": 0,
+        "precio": 200000,
+        "imagen": "https://www.nocnok.com/hubfs/Edificios.jpg",
+        "longitud": "HOLA",
+        "latitud": "HOLA",
+        "descripcion": "BLABLABLA"
+      },
+      {
+        "id_producto": 8,
+        "titulo": "Departament 123",
+        "tipo": 1,
+        "precio": 200000,
+        "imagen": "https://www.nocnok.com/hubfs/Edificios.jpg",
+        "longitud": "HOLA",
+        "latitud": "HOLA",
+        "descripcion": "BLABLABLA"
+      },
+      {
+        "id_producto": 9,
+        "titulo": "Casa 123132",
+        "tipo": 2,
+        "precio": 200000,
+        "imagen": "https://www.nocnok.com/hubfs/Edificios.jpg",
+        "longitud": "HOLA",
+        "latitud": "HOLA",
+        "descripcion": "BLABLABLA"
+      }
+    ]
+  }

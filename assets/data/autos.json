@@ -1,7 +1,7 @@
 {
     "data": [
       {
-        "id_producto": 2,
+        "id_producto": 1,
         "titulo": "MAZDA 2026",
         "tipo": 0,
         "precio": 200000,
@@ -11,6 +11,7 @@
         "descripcion": "BLABLABLA"
       },
       {
+        "id_producto": 2,
         "titulo": "MAZDA 2026",
         "tipo": 1,
         "precio": 200000,
@@ -20,6 +21,7 @@
         "descripcion": "BLABLABLA"
       },
       {
+        "id_producto": 3,
         "titulo": "MAZDA 2026",
         "tipo": 2,
         "precio": 200000,

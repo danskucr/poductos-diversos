@@ -1,0 +1,34 @@
+{
+    "data": [
+      {
+        "id_producto": 4,
+        "titulo": "Estufa",
+        "tipo": 0,
+        "precio": 200000,
+        "imagen": "https://cdn1.coppel.com/images/catalog/pm/6269713-1.jpg",
+        "longitud": "HOLA",
+        "latitud": "HOLA",
+        "descripcion": "BLABLABLA"
+      },
+      {
+        "id_producto": 5,
+        "titulo": "Refrigerador",
+        "tipo": 1,
+        "precio": 200000,
+        "imagen": "https://cdn1.coppel.com/images/catalog/pm/6269713-1.jpg",
+        "longitud": "HOLA",
+        "latitud": "HOLA",
+        "descripcion": "BLABLABLA"
+      },
+      {
+        "id_producto": 6,
+        "titulo": "Microondas",
+        "tipo": 2,
+        "precio": 200000,
+        "imagen": "https://cdn1.coppel.com/images/catalog/pm/6269713-1.jpg",
+        "longitud": "HOLA",
+        "latitud": "HOLA",
+        "descripcion": "BLABLABLA"
+      }
+    ]
+  }
