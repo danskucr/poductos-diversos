@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:productos_diversos/presentation/anuncios/widgets/detalle_anuncio/carousel_image.dart';
 
+import '../../pages/contacto_page.dart';
+
 class DetalleDescripcion extends StatelessWidget {
   const DetalleDescripcion({super.key});
 
@@ -8,7 +10,7 @@ class DetalleDescripcion extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CarouselImage(),
+        // CarouselImage(),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -24,7 +26,9 @@ class DetalleDescripcion extends StatelessWidget {
               children: [
                 recomendacion(),
                 ElevatedButton(
-                  onPressed: (){},
+                  onPressed: (){
+
+                  },
                   child: Text('Mapa')
                 )
               ],
