@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:productos_diversos/constants/Text/text_constants.dart';
+import 'package:productos_diversos/constants/style/text_style.dart';
 import 'package:productos_diversos/presentation/anuncios/pages/contacto_page.dart';
 import 'package:productos_diversos/presentation/anuncios/widgets/detalle_anuncio/detalle_descripcion.dart';
 
@@ -23,7 +24,7 @@ class _DetalleAnuncioPageState extends State<DetalleAnuncioPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false, 
-      appBar: AppBar(title: Text(textConstants.detalleAnuncio),),
+      appBar: AppBar(title: Text(textConstants.detalleAnuncio), backgroundColor: ColorsPalette().whitePD),
       backgroundColor: colorsPalette.whitePD,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -37,13 +38,19 @@ class _DetalleAnuncioPageState extends State<DetalleAnuncioPage> {
               ],
             ),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: colorsPalette.blueDarkPD,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+              ),
               onPressed: (){
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => const ContactoPage(),)
                 );
               },
-              child: Text('Contactar al vendedor')
+              child: Text('Contactar al vendedor', style: TextStyles().ubuntu16But,)
             )
           ],
         ),

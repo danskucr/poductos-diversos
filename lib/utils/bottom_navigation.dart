@@ -14,5 +14,5 @@ Widget bottomNavigationBar(Function(int)? _onItemTapped, int position) {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil')
     ],
     onTap: _onItemTapped,
-    currentIndex: position,);
+    currentIndex: position);
 }

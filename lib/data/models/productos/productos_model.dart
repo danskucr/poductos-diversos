@@ -9,14 +9,14 @@ ProductosResponse productosResponseFromJson(String str) => ProductosResponse.fro
 String productosResponseToJson(ProductosResponse data) => json.encode(data.toJson());
 
 class ProductosResponse {
-    List<Datum> data;
+    List<Producto> data;
 
     ProductosResponse({
         required this.data,
     });
 
     factory ProductosResponse.fromJson(Map<String, dynamic> json) => ProductosResponse(
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+        data: List<Producto>.from(json["data"].map((x) => Producto.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
@@ -24,7 +24,7 @@ class ProductosResponse {
     };
 }
 
-class Datum {
+class Producto {
     int idProducto;
     String titulo;
     int tipo;
@@ -34,7 +34,7 @@ class Datum {
     String latitud;
     String descripcion;
 
-    Datum({
+    Producto({
         required this.idProducto,
         required this.titulo,
         required this.tipo,
@@ -45,7 +45,7 @@ class Datum {
         required this.descripcion,
     });
 
-    factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+    factory Producto.fromJson(Map<String, dynamic> json) => Producto(
         idProducto: json["id_producto"],
         titulo: json["titulo"],
         tipo: json["tipo"],

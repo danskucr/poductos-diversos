@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:productos_diversos/constants/style/text_style.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactoLink extends StatefulWidget {
@@ -17,7 +18,6 @@ class _ContactoLinkState extends State<ContactoLink> {
   @override
   void initState() {
     super.initState();
-    // Check for phone call support.
     canLaunchUrl(Uri(scheme: 'tel', path: '123')).then((bool result) {
       setState(() {
         _hasCallSupport = result;
@@ -36,13 +36,13 @@ class _ContactoLinkState extends State<ContactoLink> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
     return Column(
       children: [
-        const Row(
+        Row(
           children: [
             Icon(Icons.phone),
-            Text('Call')
+            SizedBox(height: 10),
+            Text('Call', style: TextStyles().ubuntu14B,)
           ],
         ),
         const SizedBox(
@@ -63,13 +63,7 @@ class _ContactoLinkState extends State<ContactoLink> {
             width: screenWidth,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Mobile'),
-                  Text('+55 13212321')
-                ],
-              ),
+              child: Text('Mobile\n+55 13212321', style: TextStyles().ubuntu16M,),
             ),
           )
         ),
@@ -79,8 +73,8 @@ class _ContactoLinkState extends State<ContactoLink> {
         Row(
           children: [
             Icon(Icons.mail),
-            Text('Mail')
-          ],
+            SizedBox(height: 10),
+            Text('Mail', style: TextStyles().ubuntu14B,)          ],
         ),
       ],
     );

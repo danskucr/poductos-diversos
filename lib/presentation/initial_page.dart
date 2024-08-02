@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:productos_diversos/constants/colors/palette.dart';
+import 'package:productos_diversos/constants/style/text_style.dart';
 import 'package:productos_diversos/presentation/anuncios/pages/anuncios_page.dart';
 import 'package:productos_diversos/presentation/carrito_compras/pages/carrito_compras_pages.dart';
 import 'package:productos_diversos/presentation/favoritos/pages/favoritos_page.dart';
@@ -41,8 +42,8 @@ class _InitialPageState extends State<InitialPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false, 
       appBar: AppBar(
-
-        title: Text(_textOptions[position])
+        title: Text(_textOptions[position], style: TextStyles().ubuntu22M,),
+        backgroundColor: ColorsPalette().whitePD
       ),
       backgroundColor: colorsPalette.whitePD,
       body: Center(
