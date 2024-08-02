@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:productos_diversos/constants/colors/palette.dart';
+import 'package:productos_diversos/data/models/productos/productos_model.dart';
 
 
 class CarouselImage extends StatefulWidget {
-  const CarouselImage({super.key});
+  Producto producto;
+  CarouselImage({super.key, required this.producto});
 
   @override
   State<CarouselImage> createState() => _CarouselImageState();
@@ -11,12 +14,6 @@ class CarouselImage extends StatefulWidget {
 class _CarouselImageState extends State<CarouselImage> {
 int activePage = 0;
 late PageController _pageController;
-  List<String> images = [
-    "https://i.imgur.com/hyHKXnJ.png",
-    "https://i.imgur.com/mEbgQGH.png",
-    "https://i.imgur.com/pjElZDJ.png",
-    "https://i.imgur.com/MOgZDU4.png"
-  ];
   @override
   void initState() {
     super.initState();
@@ -29,7 +26,7 @@ List<Widget> indicators(imagesLength,currentIndex) {
       width: 10,
       height: 20,
       decoration: BoxDecoration(
-          color: currentIndex == index ? Colors.white : Colors.white54,
+          color: currentIndex == index ? ColorsPalette().greenAquaPD: ColorsPalette().greyPD,
           shape: BoxShape.circle),
     );
   });
@@ -53,13 +50,12 @@ AnimatedContainer slider(images,pagePosition,active){
           width: MediaQuery.of(context).size.width,
           height: 300,
           child: PageView.builder(
-              itemCount: images.length,
+              itemCount: widget.producto.imagen.length,
               pageSnapping: true,
               controller: _pageController,
               itemBuilder: (context, pagePosition) {
-                    //checking active position
                     bool active = pagePosition == activePage;
-                    return slider(images,pagePosition,active);
+                    return slider(widget.producto.imagen,pagePosition,active);
               },
               onPageChanged: (page) {
                 setState(() {
@@ -69,7 +65,7 @@ AnimatedContainer slider(images,pagePosition,active){
         ),
         Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: indicators(images.length,activePage)
+            children: indicators(widget.producto.imagen.length,activePage)
         )
         ],
     );

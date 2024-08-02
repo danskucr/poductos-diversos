@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:productos_diversos/constants/style/text_style.dart';
+import 'package:productos_diversos/data/models/productos/productos_model.dart';
 import 'package:productos_diversos/presentation/anuncios/widgets/detalle_anuncio/carousel_image.dart';
 
 import '../../../../constants/Text/text_constants.dart';
@@ -7,7 +8,8 @@ import '../../../../constants/colors/palette.dart';
 import '../../pages/contacto_page.dart';
 
 class DetalleDescripcion extends StatefulWidget {
-  const DetalleDescripcion({super.key});
+  Producto producto;
+  DetalleDescripcion({super.key, required this.producto});
 
   @override
   State<DetalleDescripcion> createState() => _DetalleDescripcionState();
@@ -26,7 +28,7 @@ class _DetalleDescripcionState extends State<DetalleDescripcion> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Mazda', style: TextStyles().ubuntu22M,),
+            Text(widget.producto.titulo, style: TextStyles().ubuntu22M,),
             recomendacion(),
 
           ],
@@ -34,7 +36,7 @@ class _DetalleDescripcionState extends State<DetalleDescripcion> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('\$ 360,000'),
+            Text('\$ ${widget.producto.precio}'),
             ElevatedButton(
               onPressed: (){
             
@@ -50,7 +52,7 @@ class _DetalleDescripcionState extends State<DetalleDescripcion> {
           ],
         ),
         SizedBox(height: 10,),
-        Text('Lorem Ipsum is simply dummy text of the printi')
+        Text(widget.producto.descripcion, style: TextStyles().ubuntu16M,)
       ],
     );
   }

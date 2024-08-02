@@ -21,7 +21,7 @@ class _ProductosItemState extends State<ProductosItem> {
       onTap: () => (
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const DetalleAnuncioPage())
+            builder: (context) => DetalleAnuncioPage(producto: widget.producto))
         )
       ),
       child: Card(
@@ -39,7 +39,7 @@ class _ProductosItemState extends State<ProductosItem> {
                 height: 150,
                 child: Image(
                 image: NetworkImage(
-                    widget.producto.imagen[0].url
+                    widget.producto.imagen[0]
                     )
                 ),
               ),

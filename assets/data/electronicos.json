@@ -6,14 +6,10 @@
         "tipo": 0,
         "precio": 200000,
         "imagen": [
-          {
-            "posicion": 0,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
-          },
-          {
-            "posicion": 1,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
-          }],        "longitud": "HOLA",
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+        ],
+        "longitud": "HOLA",
         "latitud": "HOLA",
         "descripcion": "BLABLABLA"
       },
@@ -23,14 +19,10 @@
         "tipo": 1,
         "precio": 200000,
         "imagen": [
-          {
-            "posicion": 0,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
-          },
-          {
-            "posicion": 1,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
-          }],        "longitud": "HOLA",
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+        ],
+        "longitud": "HOLA",
         "latitud": "HOLA",
         "descripcion": "BLABLABLA"
       },
@@ -40,14 +32,10 @@
         "tipo": 2,
         "precio": 200000,
         "imagen": [
-          {
-            "posicion": 0,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
-          },
-          {
-            "posicion": 1,
-            "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
-          }],        "longitud": "HOLA",
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+        ],
+        "longitud": "HOLA",
         "latitud": "HOLA",
         "descripcion": "BLABLABLA"
       }

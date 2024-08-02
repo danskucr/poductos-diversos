@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:productos_diversos/constants/style/text_style.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../../data/API/provider/contacto.dart';
 
 class ContactoLink extends StatefulWidget {
   const ContactoLink({super.key});
@@ -35,6 +38,8 @@ class _ContactoLinkState extends State<ContactoLink> {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ContactoProvider>(context);
+    provider.getContacto();
     double screenWidth = MediaQuery.of(context).size.width;
     return Column(
       children: [
@@ -51,7 +56,7 @@ class _ContactoLinkState extends State<ContactoLink> {
         InkWell(
           onTap: _hasCallSupport
             ? () => setState(() {
-                  _launched = _makePhoneCall(_phone);
+                  _launched = _makePhoneCall(provider.contacto.telefono);
                 })
             : null,
           child: Container(
@@ -63,7 +68,7 @@ class _ContactoLinkState extends State<ContactoLink> {
             width: screenWidth,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Text('Mobile\n+55 13212321', style: TextStyles().ubuntu16M,),
+              child: Text('Mobile\n+${provider.contacto.telefono}', style: TextStyles().ubuntu16M,),
             ),
           )
         ),

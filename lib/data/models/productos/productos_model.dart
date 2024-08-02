@@ -29,7 +29,7 @@ class Producto {
     String titulo;
     int tipo;
     int precio;
-    List<Imagen> imagen;
+    List<String> imagen;
     String longitud;
     String latitud;
     String descripcion;
@@ -50,7 +50,7 @@ class Producto {
         titulo: json["titulo"],
         tipo: json["tipo"],
         precio: json["precio"],
-        imagen: List<Imagen>.from(json["imagen"].map((x) => Imagen.fromJson(x))),
+        imagen: List<String>.from(json["imagen"].map((x) => x)),
         longitud: json["longitud"],
         latitud: json["latitud"],
         descripcion: json["descripcion"],
@@ -61,29 +61,9 @@ class Producto {
         "titulo": titulo,
         "tipo": tipo,
         "precio": precio,
-        "imagen": List<dynamic>.from(imagen.map((x) => x.toJson())),
+        "imagen": List<dynamic>.from(imagen.map((x) => x)),
         "longitud": longitud,
         "latitud": latitud,
         "descripcion": descripcion,
-    };
-}
-
-class Imagen {
-    int posicion;
-    String url;
-
-    Imagen({
-        required this.posicion,
-        required this.url,
-    });
-
-    factory Imagen.fromJson(Map<String, dynamic> json) => Imagen(
-        posicion: json["posicion"],
-        url: json["url"],
-    );
-
-    Map<String, dynamic> toJson() => {
-        "posicion": posicion,
-        "url": url,
     };
 }

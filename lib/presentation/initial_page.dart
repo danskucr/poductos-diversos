@@ -42,8 +42,8 @@ class _InitialPageState extends State<InitialPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false, 
       appBar: AppBar(
-        title: Text(_textOptions[position], style: TextStyles().ubuntu22M,),
-        backgroundColor: ColorsPalette().whitePD
+        title: Text(_textOptions[position]),
+        
       ),
       backgroundColor: colorsPalette.whitePD,
       body: Center(

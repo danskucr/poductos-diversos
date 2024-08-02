@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:productos_diversos/constants/Text/text_constants.dart';
 import 'package:productos_diversos/constants/style/text_style.dart';
+import 'package:productos_diversos/data/models/productos/productos_model.dart';
 import 'package:productos_diversos/presentation/anuncios/pages/contacto_page.dart';
 import 'package:productos_diversos/presentation/anuncios/widgets/detalle_anuncio/detalle_descripcion.dart';
 
@@ -8,7 +9,8 @@ import '../../../constants/colors/palette.dart';
 import '../widgets/detalle_anuncio/carousel_image.dart';
 
 class DetalleAnuncioPage extends StatefulWidget {
-  const DetalleAnuncioPage({super.key});
+  Producto producto;
+  DetalleAnuncioPage({super.key, required this.producto});
 
   @override
   State<DetalleAnuncioPage> createState() => _DetalleAnuncioPageState();
@@ -33,8 +35,8 @@ class _DetalleAnuncioPageState extends State<DetalleAnuncioPage> {
           children: [
             Column(
               children: [
-                CarouselImage(),
-                DetalleDescripcion(),
+                CarouselImage(producto: widget.producto),
+                DetalleDescripcion(producto: widget.producto),
               ],
             ),
             ElevatedButton(
