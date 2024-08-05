@@ -34,15 +34,18 @@ class _ProductosItemState extends State<ProductosItem> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              SizedBox(
-                width: 150,
-                height: 150,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Image(
-                image: NetworkImage(
-                    widget.producto.imagen[0]
-                    )
+                  fit: BoxFit.fitHeight,
+                  width: 70,
+                  height: 100,
+                  image: NetworkImage(
+                      widget.producto.imagen[0]
+                      )
                 ),
               ),
+              
               SizedBox(width: 10),
               Expanded(
                 child: Column(
@@ -65,5 +68,16 @@ class _ProductosItemState extends State<ProductosItem> {
           ),
         )),
     );
+  }
+}
+class MyClipper extends CustomClipper<Rect>{
+  @override
+  Rect getClip(Size size) {
+    return const Rect.fromLTWH(0, 0, 50, 180);
+  }
+  
+  @override
+  bool shouldReclip (covariant CustomClipper<Rect> oldClipper) {
+    return false;
   }
 }

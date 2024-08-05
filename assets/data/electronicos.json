@@ -6,12 +6,12 @@
         "tipo": 0,
         "precio": 200000,
         "imagen": [
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+          "https://http2.mlstatic.com/D_NQ_NP_2X_713323-MLU75738606563_042024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_930287-MLU75738472301_042024-F.webp"
         ],
-        "longitud": "HOLA",
-        "latitud": "HOLA",
-        "descripcion": "BLABLABLA"
+        "longitud": "19.596730",
+        "latitud": "99.187290",
+        "descripcion": "Estufa Mabe EM7620BAIS2 Piso 30 Plata Mercury"
       },
       {
         "id_producto": 5,
@@ -19,12 +19,12 @@
         "tipo": 1,
         "precio": 200000,
         "imagen": [
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+          "https://m.media-amazon.com/images/I/51L2IORRXeL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/51hZzdqVtAL._AC_SL1102_.jpg"
         ],
-        "longitud": "HOLA",
-        "latitud": "HOLA",
-        "descripcion": "BLABLABLA"
+        "longitud": "19.596730",
+        "latitud": "99.187290",
+        "descripcion": "Refrigerador con freezer Mabe RMS510ICMR color black stainless steel con capacidad de 510L 115V."
       },
       {
         "id_producto": 6,
@@ -32,12 +32,12 @@
         "tipo": 2,
         "precio": 200000,
         "imagen": [
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+          "https://m.media-amazon.com/images/I/51STOTMUpQL._AC_SL1200_.jpg",
+          "https://m.media-amazon.com/images/I/51HLaHt2MtL._AC_SL1200_.jpg"
         ],
-        "longitud": "HOLA",
-        "latitud": "HOLA",
-        "descripcion": "BLABLABLA"
+        "longitud": "19.596730",
+        "latitud": "99.187290",
+        "descripcion": "Microondas Mabe de 0.7 Pies de capacidad color blanco modelo HMM."
       }
     ]
   }

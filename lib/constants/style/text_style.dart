@@ -31,7 +31,7 @@ class TextStyles {
     fontSize: 14,
     color: Colors.black,
     fontWeight: FontWeight.normal,
-    overflow: TextOverflow.ellipsis
+    // overflow: TextOverflow.ellipsis
   );
 
   TextStyle ubuntu14B = TextStyle(
@@ -46,7 +46,7 @@ class TextStyles {
     fontSize: 16,
     color: Colors.black,
     fontWeight: FontWeight.normal,
-    overflow: TextOverflow.ellipsis
+    // overflow: TextOverflow.ellipsis
   );
   TextStyle ubuntu16B = TextStyle(
     fontFamily: 'Ubuntu',

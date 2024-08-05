@@ -2,7 +2,7 @@
   "data": [
     {
       "id_producto": 1,
-      "titulo": "MAZDA 2026",
+      "titulo": "MAZDA 2016",
       "tipo": 0,
       "precio": 200000,
       "imagen": [
@@ -28,16 +28,16 @@
     },
     {
       "id_producto": 3,
-      "titulo": "MAZDA 2026",
+      "titulo": "MAZDA 2023",
       "tipo": 2,
       "precio": 200000,
       "imagen": [
         "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+        "https://media-assets.mazda.eu/image/upload/q_auto,f_auto/mazdaes/globalassets/cars/2024-mazda3-hatchback/showroom/230307_478_269_slidinggallerystatic_medium_m3_hb.jpg?rnd=498ba6"
       ],
-      "longitud": "HOLA",
-      "latitud": "HOLA",
-      "descripcion": "BLABLABLA"
+      "longitud": "19.302192",
+      "latitud": "99.192784",
+      "descripcion": "Descubre el placer de conducir un carro elegante y distinguido como el Mazda3 Sedán 2024. Sofisticación en cada curva y detalle."
     }
   ]
 }

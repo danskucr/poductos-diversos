@@ -25,14 +25,13 @@ class _ContactoFormState extends State<ContactoForm> {
             Text('Nombre', style: TextStyles().ubuntu16B,),
             TextField(
               decoration: InputDecoration(
-                fillColor: Colors.amber,
-                focusColor: Colors.amber,
-                prefixIconColor: Colors.amber,
-                hoverColor: Colors.amber,
-                suffixIconColor: Colors.amber,
-                border: OutlineInputBorder(
-                  borderRadius:  BorderRadius.circular(10)
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0.0),
                 ),
+                filled: true,
+                fillColor: Colors.grey.shade300,
+
               ),
             ),
             SizedBox(
@@ -41,9 +40,13 @@ class _ContactoFormState extends State<ContactoForm> {
             Text('Correo Contacto', style: TextStyles().ubuntu16B),
             TextField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius:  BorderRadius.circular(10)
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0.0),
                 ),
+                filled: true,
+                fillColor: Colors.grey.shade300,
+
               ),
             ),
             SizedBox(
@@ -53,9 +56,13 @@ class _ContactoFormState extends State<ContactoForm> {
             TextField(
               maxLines: 3,
               decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius:  BorderRadius.circular(10)
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0.0),
                 ),
+                filled: true,
+                fillColor: Colors.grey.shade300,
+
               ),
             ),
             SizedBox(

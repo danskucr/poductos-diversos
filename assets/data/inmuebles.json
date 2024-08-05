@@ -6,38 +6,38 @@
         "tipo": 0,
         "precio": 200000,
         "imagen": [
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+          "https://img10.naventcdn.com/avisos/resize/18/01/43/94/79/81/1200x1200/1471527389.jpg?isFirstImage=true",
+          "https://img10.naventcdn.com/avisos/resize/18/01/43/94/79/81/1200x1200/1471527386.jpg"
         ],
-        "longitud": "HOLA",
-        "latitud": "HOLA",
-        "descripcion": "BLABLABLA"
+        "longitud": "19.452186",
+        "latitud": "99.219363",
+        "descripcion": "Descubre el lujo y confort en nuestro desarrollo inmobiliario en Lomas de Angelópolis, Puebla."
       },
       {
         "id_producto": 8,
-        "titulo": "Departament 123",
+        "titulo": "Casa 142",
         "tipo": 1,
         "precio": 200000,
         "imagen": [
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+          "https://img10.naventcdn.com/avisos/resize/18/01/43/27/40/81/1200x1200/1454205043.jpg",
+          "https://img10.naventcdn.com/avisos/resize/18/01/43/27/40/81/1200x1200/1454205053.jpg?isFirstImage=true"
         ],
-        "longitud": "HOLA",
-        "latitud": "HOLA",
-        "descripcion": "BLABLABLA"
+        "longitud": "19.452186",
+        "latitud": "99.219363",
+        "descripcion": "Dos Valles es un desarrollo residencial enfocado en la calidad de vida de tu familia, brindando espacios de comodidad y seguridad."
       },
       {
         "id_producto": 9,
-        "titulo": "Casa 123132",
+        "titulo": "Casa 533",
         "tipo": 2,
         "precio": 200000,
         "imagen": [
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+          "https://img10.naventcdn.com/avisos/resize/18/01/43/34/98/24/1200x1200/1456616649.jpg",
+          "https://img10.naventcdn.com/avisos/resize/18/01/43/34/98/24/1200x1200/1456616645.jpg"
         ],
-        "longitud": "HOLA",
-        "latitud": "HOLA",
-        "descripcion": "BLABLABLA"
+        "longitud": "19.452186",
+        "latitud": "99.219363",
+        "descripcion": "Ubicado en zona de alto crecimiento y plusvalía, a 10 min. de la Zona Plateada, 25 min. del Centro de Pachuca y 30 min. de los principales balnearios y pueblos mágicos de Hidalgo."
       }
     ]
   }
