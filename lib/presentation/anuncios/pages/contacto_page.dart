@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:productos_diversos/data/API/provider/email.dart';
 import 'package:productos_diversos/presentation/anuncios/widgets/contacto/contacto_form.dart';
 import 'package:productos_diversos/presentation/anuncios/widgets/contacto/contacto_link.dart';
 import 'package:provider/provider.dart';
@@ -22,9 +23,17 @@ class _ContactoPageState extends State<ContactoPage> {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(create: (context) => ContactoProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create:  (context) => ContactoProvider()
+        ),
+        ChangeNotifierProvider(
+          create:  (context) => EmailProvider()
+        )
+      ],
       child: Scaffold(
-        resizeToAvoidBottomInset: false, 
+        // resizeToAvoidBottomInset: false, 
         appBar: AppBar(title: Text(textConstants.detalleAnuncio), backgroundColor: ColorsPalette().whitePD),
         backgroundColor: colorsPalette.whitePD,
         body: Padding(
@@ -42,7 +51,7 @@ class _ContactoPageState extends State<ContactoPage> {
             ),
           ),
         )
-      )
+      ),
     );
   }
 }

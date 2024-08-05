@@ -25,7 +25,7 @@ class _DetalleAnuncioPageState extends State<DetalleAnuncioPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false, 
+      // resizeToAvoidBottomInset: false, 
       appBar: AppBar(title: Text(textConstants.detalleAnuncio), backgroundColor: ColorsPalette().whitePD),
       backgroundColor: colorsPalette.whitePD,
       body: Padding(
