@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:productos_diversos/constants/Text/currency_format.dart';
 import 'package:productos_diversos/constants/colors/palette.dart';
 import 'package:productos_diversos/constants/style/text_style.dart';
 import 'package:productos_diversos/data/API/provider/productos.dart';
@@ -56,7 +57,7 @@ class _ProductosItemState extends State<ProductosItem> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(widget.producto.titulo, style: TextStyles().ubuntu16B,),
-                        Text(widget.producto.precio.toString(), style: TextStyles().ubuntu16M,)
+                        Text( numberFormat.format(widget.producto.precio), style: TextStyles().ubuntu16M,)
                       ],
                     ),
                     SizedBox(height: 5),

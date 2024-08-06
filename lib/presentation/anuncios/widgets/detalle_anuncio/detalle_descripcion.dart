@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:productos_diversos/constants/Text/currency_format.dart';
 import 'package:productos_diversos/constants/style/text_style.dart';
 import 'package:productos_diversos/data/models/productos/productos_model.dart';
 import 'package:productos_diversos/presentation/anuncios/widgets/detalle_anuncio/carousel_image.dart';
@@ -36,7 +37,7 @@ class _DetalleDescripcionState extends State<DetalleDescripcion> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('\$ ${widget.producto.precio}'),
+            Text( numberFormat.format(widget.producto.precio)),
             ElevatedButton(
               onPressed: (){
             
