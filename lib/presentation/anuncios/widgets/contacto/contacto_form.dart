@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:productos_diversos/constants/Text/validator.dart';
 import 'package:productos_diversos/constants/colors/palette.dart';
 import 'package:productos_diversos/constants/style/text_style.dart';
 import 'package:productos_diversos/data/API/provider/email.dart';
@@ -17,6 +18,8 @@ class _ContactoFormState extends State<ContactoForm> {
   TextEditingController emailController = TextEditingController();
   TextEditingController bodyController = TextEditingController();
 
+  String email = '';
+
   GlobalKey<FormState> keyForm = GlobalKey();
 
 
@@ -26,7 +29,20 @@ class _ContactoFormState extends State<ContactoForm> {
     super.initState();
 
   }
-  
+    String? validateEmail(String? value) {
+    const pattern = r"(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'"
+        r'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-'
+        r'\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*'
+        r'[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4]'
+        r'[0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9]'
+        r'[0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\'
+        r'x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])';
+    final regex = RegExp(pattern);
+
+    return value!.isNotEmpty && !regex.hasMatch(value)
+        ? 'Correo Invalido'
+        : null;
+  }
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<EmailProvider>(context);
@@ -61,10 +77,14 @@ class _ContactoFormState extends State<ContactoForm> {
             height: 10,
           ),
           Text('Correo Contacto', style: TextStyles().ubuntu16B),
-          TextField(
+          TextFormField(
+            autovalidateMode: AutovalidateMode.always,
+            validator: validateEmail,
             keyboardType: TextInputType.emailAddress,
             controller: emailController,
+            onChanged: (text) => setState(() => email),
             decoration: InputDecoration(
+                // errorText: validateEmail(bodyController.value.text),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: Colors.transparent, width: 0.0),

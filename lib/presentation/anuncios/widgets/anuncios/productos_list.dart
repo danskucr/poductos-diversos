@@ -16,37 +16,82 @@ class ProductosList extends StatefulWidget {
 
 class _ProductosListState extends State<ProductosList> {
 
+  final controllerList = ScrollController();
+  
+  @override
+  void initState() {
+    super.initState();
+    controllerList.addListener(_onScroll);
+    context.read<ProductosProvider>().getAutos();
+    context.read<ProductosProvider>().getInmuebles();
+    context.read<ProductosProvider>().getElectronicos();
+  }
+  void _onScroll() async {
+    if (controllerList.position.pixels >=
+        controllerList.position.maxScrollExtent) {
+      await Future.delayed(Duration(seconds: 3));
+      if (widget.position == 0) {
+        context.read<ProductosProvider>().getAutos();
+      } else if (widget.position == 1) {
+        context.read<ProductosProvider>().getInmuebles();
+      } else {
+        context.read<ProductosProvider>().getElectronicos();
+
+      }
+      
+    }
+  }
+
+  @override
+  void dispose() {
+    controllerList.dispose();
+    super.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<ProductosProvider>(context);
-    provider.getAutos();
-    provider.getElectronicos();
-    provider.getInmuebles();
     Future refresh() async {
       setState((){
-        provider.getAutos();
+        // provider.getAutos();
       });
     }
-    return provider.isLoading ?  
-      const Center(
-        child: LinearProgressIndicator(),
-      ) : provider.error.isNotEmpty
-        ?  Center(
-        child: Text('Error al consultar información', style: TextStyles().ubuntu16M),
-      ) : listItem(
-        context, 
-        widget.position == 0 ? provider.autos : widget.position == 1 ? provider.electronicos : provider.inmuebles, 
-        refresh);
+
+    return Consumer<ProductosProvider>(
+      builder: (context, provider, child) {
+        return provider.isLoading ?  
+          const Center(
+            child: LinearProgressIndicator(),
+          ) : provider.error.isNotEmpty
+            ?  Center(
+            child: Text('Error al consultar información', style: TextStyles().ubuntu16M),
+          ) : listItem(
+            context, 
+            widget.position == 0 ? provider.productoAutos : widget.position == 1 ? provider.productoInmuebles : provider.productoElectronicos, 
+            refresh);
+      }
+    );
   }
 
-  Widget listItem(BuildContext context, ProductosResponse productosResponse, Future<void> Function() refresh) {
+  Widget listItem(BuildContext context, List<Producto> productos, Future<void> Function() refresh) {
     return RefreshIndicator(
       onRefresh: refresh,
       child: ListView.builder(
+        controller: controllerList,
         padding: const EdgeInsets.all(10),
-        itemCount: productosResponse.data.length,
-        itemBuilder: (context, index) => ProductosItem(producto: productosResponse.data[index])
+        itemCount: productos.length + 1,
+        itemBuilder: (context, index) {
+          if (index < productos.length) {
+            final item = productos[index];
+            
+            return ProductosItem(producto: item);
+          } else {
+            return const Padding(
+              padding: EdgeInsets.symmetric(vertical: 32),
+              child: Center(child: CircularProgressIndicator())
+            );
+          }
+        }
       ),
     );
   }

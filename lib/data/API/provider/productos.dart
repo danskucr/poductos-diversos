@@ -13,16 +13,24 @@ class ProductosProvider extends ChangeNotifier{
   ProductosResponse inmuebles = ProductosResponse(data: []);
   ProductosResponse electronicos = ProductosResponse(data: []);
 
-  
+  List<Producto> productoAutos = [];
+  List<Producto> productoInmuebles = [];
+  List<Producto> productoElectronicos = [];
+
+  getNext() async {
+
+
+  }
+
   getAutos() async {
     try {
+      
       final String response = await rootBundle.loadString('assets/data/autos.json');
+      autos = ProductosResponse.fromJson(json.decode(response));
 
-      if (response != null) {
-        autos = ProductosResponse.fromJson(json.decode(response));        
-      }else{
-        error = 'No hay registros';
-      }
+      productoAutos.addAll(autos.data);
+      notifyListeners();
+
     } catch (e) {
       error = e.toString();
     }
@@ -30,15 +38,15 @@ class ProductosProvider extends ChangeNotifier{
     notifyListeners();
 
   }
+
   getInmuebles() async {
     try {
       final String response = await rootBundle.loadString('assets/data/inmuebles.json');
 
-      if (response != null) {
-        inmuebles = ProductosResponse.fromJson(json.decode(response));        
-      }else{
-        error = 'No hay registros';
-      }
+      inmuebles = ProductosResponse.fromJson(json.decode(response));
+      productoInmuebles.addAll(inmuebles.data);
+      notifyListeners();
+
     } catch (e) {
       error = e.toString();
     }
@@ -50,11 +58,11 @@ class ProductosProvider extends ChangeNotifier{
     try {
       final String response = await rootBundle.loadString('assets/data/electronicos.json');
 
-      if (response != null) {
-        electronicos = ProductosResponse.fromJson(json.decode(response));        
-      }else{
-        error = 'No hay registros';
-      }
+      electronicos = ProductosResponse.fromJson(json.decode(response));
+
+      productoElectronicos.addAll(electronicos.data);
+      notifyListeners();
+
     } catch (e) {
       error = e.toString();
     }
@@ -63,3 +71,28 @@ class ProductosProvider extends ChangeNotifier{
 
   }
 }
+
+  // (List<Producto>, int, int)  _getRequestParams(List<Producto> producto, int inicio, int fin) {
+  //   List<Producto> productoNew = [];
+
+  //   for (var i = inicio; i < fin; i++) {
+  //     productoNew.add(producto[i]);
+  //   }
+
+  //   return (productoNew, productoNew.first.idProducto, productoNew.first.idProducto);
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
