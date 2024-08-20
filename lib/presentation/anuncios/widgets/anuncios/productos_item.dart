@@ -4,7 +4,7 @@ import 'package:productos_diversos/constants/colors/palette.dart';
 import 'package:productos_diversos/constants/style/text_style.dart';
 import 'package:productos_diversos/data/API/provider/productos.dart';
 import 'package:productos_diversos/data/models/productos/productos_model.dart';
-import 'package:productos_diversos/presentation/anuncios/pages/detalle_anuncio.dart';
+import 'package:productos_diversos/presentation/anuncios/pages/detalle_page.dart';
 import 'package:provider/provider.dart';
 
 class ProductosItem extends StatefulWidget {

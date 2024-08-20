@@ -4,4 +4,5 @@ class TextConstants {
   String electronicos = 'Electronicos';
   String buscadorAnuncio = 'Buscador anuncio';
   String detalleAnuncio = 'Detalle Anuncio';
+  String mapaAnuncio = 'Mapa Anuncio';
 }
